@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leilão de Carro</title>
+    <script src="button-component.js" defer></script>
+    <script src="../components/form-handler.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de linkar o CSS -->
+</head>
+<body>
+    <section class="container container--contact" id="contact">
+
+        <div class="form-container">
+            <h1>Participe do Leilão</h1>
+            <form id="auctionForm">
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+                <input type="number" id="age" name="age" placeholder="Idade" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="number" id="bid" name="bid" placeholder="Valor do Lance" required>
+                <button-component id="submitButton">Enviar</button-component>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

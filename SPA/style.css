@@ -1,0 +1,339 @@
+/* Reset da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações genéricas */
+.container-grid {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 120rem; /* 1200px */
+}
+
+/* Realizar scroll suave na página */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    overflow: hidden;
+}
+
+/* Começando estilização do header */
+.header {
+    width: 100%;
+    background-color: #4e53d4;
+    height: 9rem; /* 90px */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem; /* 20px */
+}
+
+.header__logo {
+    color: white;
+    font-size: 2.4rem; /* 24px */
+    font-weight: bold;
+}
+
+/* Remover a estilização que vem por padrão nos links da ul li */
+.links-header ul li {
+    list-style-type: none;
+    text-decoration: none; /* Remove as bolinhas laterais */
+}
+
+/* Realiza a estilização dos links dentro da nossa header */
+.links-header .nav-links a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white;
+    font-family: font-paragrafo-bold;
+    font-size: 2rem; /* 20px */
+    letter-spacing: 0.1rem; /* 1px */
+}
+
+.links-header .nav-links a:hover { /* Efeito de hover nos links */
+    color: black;
+    transition: 0.2s; /* Tempo para realizar mudança de cor */
+}
+
+.nav-links { /* Espaçamento dos links e alinhamento horizontal */
+    width: 35rem; /* 350px */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Estilização da navegação */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__item {
+    margin: 0 1.5rem; /* 15px */
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem; /* 18px */
+}
+
+.nav__link:hover {
+    color: black;
+    transition: 0.2s; /* Tempo para realizar mudança de cor */
+}
+
+.nav__link:active {
+    color: rgb(255, 255, 255); /* Cor quando o link é clicado */
+}
+
+/* Estilização do conteúdo principal */
+/* HOME */
+.main--home {
+    background-image: url('./assets/images/mustang03.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main__title {
+    font-size: 4em;
+    margin: 0.5em 0;
+    color:white;
+    font-weight: 600;
+}
+
+.main__description {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    flex-wrap: wrap;
+    
+}
+
+/* --------------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 9rem); /* Ajusta a altura para compensar o header fixo */
+    background-color: #f4f4f4;
+    margin: 9rem auto 0; /* Adiciona margem superior para compensar o header fixo */
+    background: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* 10px */
+    border-radius: 0.8rem; /* 8px */
+}
+
+/* Estilização do conteúdo principal */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    padding: 2rem; /* 20px */
+    box-sizing: border-box;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem; /* 1200px */
+    background: white;
+    /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 10px */
+    border-radius: 0.8rem; /* 8px */
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Ocupa toda a altura disponível */
+}
+
+.about__content {
+    padding: 2rem; /* 20px */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o texto */
+}
+
+.about__title {
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    font-size: 2.4rem; 
+}
+
+.about__description {
+    margin: 2rem 0; /* 20px */
+    text-align: justify;
+    font-size: 1.8rem; /* 18px */
+}
+
+.about__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* 20px */
+}
+
+.about__image-img {
+    max-width: 100%;
+    max-height: 30rem; /* 300px */
+    object-fit: cover;
+}
+
+
+/* CONTATO */
+/* Estilização do conteúdo principal */
+/* CONTATO */
+/* Estilização do conteúdo principal */
+/* CONTATO */
+.container--contact {
+    background-image: url('./assets/images/mustang02.jpeg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adicione padding para espaçamento interno */
+    box-sizing: border-box; /* Inclua padding e border no tamanho total */
+}
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+.form-container {
+    background-color: #fff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 400px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    box-sizing: border-box; /* Inclua padding e border no tamanho total */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+
+/* pagenotfound */
+.error-message {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .about__container {
+        flex-direction: row;
+    }
+    
+    .about__image-img {
+        max-height: 100%;
+    }
+}

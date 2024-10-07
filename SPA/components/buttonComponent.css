@@ -1,0 +1,23 @@
+.buttonComponent {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonComponent:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.buttonComponent:active {
+    background-color: #003f7f;
+    transform: translateY(0);
+}
