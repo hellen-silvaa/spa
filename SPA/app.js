@@ -15,6 +15,7 @@ function loadContent(page) {
             return response.text(); // Retorna o conteúdo da página como texto
         })
         .then(html => {
+            
             document.getElementById('app').innerHTML = html; // Insere o conteúdo da página no elemento com id "app"
         })
         .catch(error => {
