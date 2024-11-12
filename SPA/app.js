@@ -6,6 +6,7 @@ const routes = {
 };
 
 // Função para carregar conteúdo de arquivo HTML
+
 function loadContent(page) {
     fetch(page) // Faz uma requisição para carregar o conteúdo da página
         .then(response => {
